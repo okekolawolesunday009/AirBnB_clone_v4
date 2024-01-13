@@ -8,7 +8,7 @@ $(document).ready(function(){
 		let amenityID = $(this).data('id');
 		let amenityName = $(this).data('name');
 
-		// check if the checkboc is checked
+		// check if the checkbox is checked
 		if ($(this).prop('checked')){
 			selectedAmenities[amenityID] = amenityName;
 		} else {
@@ -16,6 +16,8 @@ $(document).ready(function(){
 		}
 		
 		// Update the h4 tag inside the div Amenities with the list of Amenities checked
-		$('.amenities H4').text(Object.values(selectedAmenities).join(', '));
+		let selectedAmenitiesArray = Object.values(selectedAmenities);
+
+		$('.amenities h4').text(selectedAmenitiesArray.length > 2 ? selectedAmenitiesArray.slice(0, 2).join(', ') + '...' :  selectedAmenitiesArray.join(', '))
 	});
 })
