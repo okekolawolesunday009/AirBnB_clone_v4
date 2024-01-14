@@ -3,6 +3,7 @@ $(document).ready(function(){
 		url: 'http://0.0.0.0:5001/api/v1/places_search/',
 		type: 'POST',
 		contentType: 'application/json',
+		data: JSON.stringify({}),
 		success: function(data) {
 			const placeSection = $('.places');
 			$.each(data, function(index, place){
@@ -18,7 +19,7 @@ $(document).ready(function(){
 						<div class="number_bathrooms">${place.number_bathrooms} Bathroom${place.number_bathrooms !== 1 ? 's' : ''}</div>
 					</div>
 					<div class="user">
-						<b>Owner:</b> ${place.user.first_name} ${place.user.last_name}
+						<b>Owner:</b> ${place.user_id.first_name} ${place.user_id.last_name}
 					</div>
 					<div class="description">
 						${place.description}

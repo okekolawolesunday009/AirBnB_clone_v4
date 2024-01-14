@@ -17,7 +17,7 @@ $(document).ready(function(){
 		
 		// Update the h4 tag inside the div Amenities with the list of Amenities checked
 		let selectedAmenitiesArray = Object.values(selectedAmenities);
-
 		$('.amenities h4').text(selectedAmenitiesArray.length > 2 ? selectedAmenitiesArray.slice(0, 2).join(', ') + '...' :  selectedAmenitiesArray.join(', '))
+		console.log(selectedAmenitiesArray)
 	});
 })
