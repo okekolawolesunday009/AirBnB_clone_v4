@@ -25,7 +25,7 @@
 	    <ul>
 	      {% for state in states %}
 	      <li>
-		<li><input type="checkbox" class="city" style="margin-left: 10px;" data-id="{{ city.id }}" data-name="{{ city.name }}">{{ city.name }}</li><h2>{{ state[0].name }}:</h2>
+		<h2 data-id="{{ state[0].id }}">{{ state[0].name }}:</h2>
 		<ul>
 		  {% for city in state[1] %}
 		  <li><input type="checkbox" class="city" style="margin-left: 10px;" data-id="{{ city.id }}" data-name="{{ city.name }}">{{ city.name }}</li>
@@ -42,7 +42,7 @@
 	  <div class="popover">
 	    <ul>
 	      {% for amenity in amenities %}
-	      <li><input type="checkbox" style="margin-left:  10px;" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">{{ amenity.name }}</li>
+	      <li><input type="checkbox" class="amenity" style="margin-left:  10px;" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">{{ amenity.name }}</li>
 	      {% endfor %}
 	    </ul>
 	  </div>
@@ -76,7 +76,7 @@
     <footer>
       <p>Holberton School</p>
     </footer>
-    <script src="../static/scripts/4-hbnb.js?{{ cache_id }}"></script>
+    <script src="../static/scripts/100-hbnb.js?{{ cache_id }}"></script>
     <script src="../static/scripts/2-hbnb.js?{{ cache_id }}"></script>
     <!-- <script src="../static/scripts/3-hbnb.js?{{ cache_id }}"></script> -->
   </body>
